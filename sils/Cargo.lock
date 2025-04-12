@@ -237,17 +237,17 @@ dependencies = [
 ]
 
 [[package]]
-name = "c2a-gen1"
+name = "c2a-aobc"
 version = "0.1.0"
 dependencies = [
  "cmake",
 ]
 
 [[package]]
-name = "c2a-gen1-sils"
+name = "c2a-aobc-sils"
 version = "0.1.0"
 dependencies = [
- "c2a-gen1",
+ "c2a-aobc",
  "c2a-gpio-noop",
  "c2a-i2c-noop",
  "c2a-meisei-adc-noop",
