@@ -1,8 +1,14 @@
+include(${C2A_CORE_DIR}/common.cmake)
+
 if(BUILD_C2A_AS_CXX)
   set_source_files_properties(${C2A_SRCS} PROPERTIES LANGUAGE CXX)
+  set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 11) # C++11
 else()
   set_target_properties(${PROJECT_NAME} PROPERTIES C_STANDARD 99)
   set_target_properties(${PROJECT_NAME} PROPERTIES C_EXTENSIONS FALSE) # no extensions(GNU)
+
+    # for IfWrapper/Arduino
+    set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 11) # C++11
 endif()
 
 if(BUILD_C2A_AS_SILS_FW)

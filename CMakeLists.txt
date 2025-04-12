@@ -3,6 +3,8 @@
 cmake_minimum_required(VERSION 3.13)
 project(C2A)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 option(BUILD_C2A_AS_CXX "Build C2A as C++" OFF)
 
 option(BUILD_C2A_AS_SILS_FW "Build C2A as SILS firmware" ON)
@@ -11,9 +13,23 @@ option(BUILD_C2A_AS_SILS_FW "Build C2A as SILS firmware" ON)
 # これをONにした状態でTMTC_IFが動いていない場合，そちらのバッファが詰まってSILSの動作が止まることがあるので注意すること！
 option(USE_UART_COM "Use UART COM" OFF)
 
+# SCI COM for connection to WINGS TMTC IF
+option(USE_SCI_COM "Use SCI_COM" OFF)
+
+# SCI COM for connection to PC UART
+
+option(USE_SCI_COM_UART "Use SCI_COM_UART" OFF)
+
+option(USE_KBLE_MOBC_UART "Use kble-connected MOBC-line UART" OFF)
+
+option(USE_IFWRAPPER_SILS "Use IfWrapper/Sils implementation" ON)
+
+option(BUILD_C2A_FOR_PIC32MK "Build C2A for PIC32MX" OFF)
+
+
 set(C2A_CORE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/src_core)
 set(C2A_USER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/src_user)
-set(C2A_SATELLITE_PARAMETERS_DIR SatelliteParameters/Sample) # relative path from Settings
+set(C2A_SATELLITE_PARAMETERS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/src_user/Settings/SatelliteParameters/Sample) # relative path from Settings
 
 if(NOT BUILD_C2A_AS_CXX)
   set(BUILD_C2A_AS_C99 ON)
