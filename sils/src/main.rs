@@ -1,6 +1,6 @@
 use c2a_sils_runtime as c2a_runtime;
 
-extern crate c2a_gen1;
+extern crate c2a_aobc;
 
 extern crate c2a_gpio_noop;
 extern crate c2a_i2c_noop;
