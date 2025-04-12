@@ -65,3 +65,8 @@ Examples/src_aobc
 # pytest cache
 *.pyc
 
+# node_modules
+node_modules/
+
+# tlmcmddb.json
+tlmcmddb.json

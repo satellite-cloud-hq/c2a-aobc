@@ -1,0 +1,19 @@
+[package]
+name = "c2a-gen1-sils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+c2a-gen1 = { path = "../" }
+
+c2a-sils-runtime = { git = "https://github.com/arkedge/c2a-core.git", tag = "v4.3.0" }
+
+c2a-wdt-noop = { git = "https://github.com/arkedge/c2a-core.git", tag = "v4.3.0" }
+c2a-i2c-noop = { git = "https://github.com/arkedge/c2a-core.git", tag = "v4.3.0" }
+c2a-spi-noop = { git = "https://github.com/arkedge/c2a-core.git", tag = "v4.3.0" }
+c2a-meisei-adc-noop = { git = "https://github.com/arkedge/c2a-hal.git", tag = "v0.6.1" }
+
+c2a-uart-kble = { git = "https://github.com/arkedge/c2a-core.git", tag = "v4.3.0" }
+
+c2a-gpio-noop = { path = "../../c2a-gpio-noop" }
+c2a-pwm-noop = { path = "../../c2a-pwm-noop" }

@@ -1,0 +1,9 @@
+[package]
+name = "c2a-aobc"
+version = "0.1.0"
+edition = "2025"
+
+[build-dependencies]
+cmake = "0.1.50"
+
+[dependencies]
